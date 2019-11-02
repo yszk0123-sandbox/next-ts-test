@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { NextPage } from 'next';
 
 interface Props {
   userAgent: string;
@@ -14,7 +14,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
 };
 
 Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers["user-agent"] || "" : navigator.userAgent;
+  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
   return { userAgent };
 };
 
